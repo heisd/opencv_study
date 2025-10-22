@@ -5,16 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="76fd5eac-1e46-4736-8bef-e016b9a398f6" name="更改" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/YOLOTrain.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/image/img.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/esay_using_matplotlib.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/opencv_image_imread.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/opencv_video_camera.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/opencv_video.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/opencv_video_save.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/video/video.mp4" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/opencv_video_camera.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/opencv_video_camera.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,7 +24,7 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/reference" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 7
@@ -48,15 +43,22 @@
     "Python.esay_using_matplotlib.executor": "Run",
     "Python.opencv.executor": "Run",
     "Python.opencv_image_imread.executor": "Run",
+    "Python.opencv_video.executor": "Run",
+    "Python.opencv_video_save.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "liquanyan",
+    "last_opened_file_path": "/Users/liquanyan/PycharmProjects/YOLOTrain/video",
     "settings.editor.selected.configurable": "preferences.pluginManager"
   }
 }]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/video" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/src" />
     </key>
   </component>
