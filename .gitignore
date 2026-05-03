@@ -1,0 +1,18 @@
+# IDE 配置文件
+.idea/
+.vscode/
+*.iml
+
+# Python 缓存
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# 生成的视频文件
+video/saved_video.avi
+video/output_*
+
+# 系统文件
+.DS_Store
+Thumbs.db
