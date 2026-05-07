@@ -1,35 +1,38 @@
+import os
 import cv2
-import numpy as np
-cap=cv2.VideoCapture("/Users/liquanyan/PycharmProjects/YOLOTrain/video/video.mp4")
-# fourcc是four character code
-# FourCC是用于指定视频编解码器的4字节代码。可用代码列表
-# *"XVID"是保存视频的格式
-fourcc=cv2.VideoWriter_fourcc(*"XVID")
+
+video_path = os.path.join(os.path.dirname(__file__), '..', 'video', 'video.mp4')
+output_path = os.path.join(os.path.dirname(__file__), '..', 'video', 'saved_video.avi')
+
+cap = cv2.VideoCapture(video_path)
 if not cap.isOpened():
-    print("video is not opened")
+    print("视频文件打开失败")
     exit()
-# 获取视频的分辩率
-width=int(cap.get(cv2.CAP_PROP_FRAME_WIDTH))
-height=int(cap.get(cv2.CAP_PROP_FRAME_HEIGHT))
-# 720 *1280的视频宽度和高度
-print(width,height)
-# 保存视频
-# 参数:保存视频的路径,保存视频的格式,保存视频的帧率,保存视频的分辨率
-saved_video=cv2.VideoWriter("/Users/liquanyan/PycharmProjects/YOLOTrain/saved_video",fourcc,20.0,(width,height))
+
+# 获取视频的宽高
+width = int(cap.get(cv2.CAP_PROP_FRAME_WIDTH))
+height = int(cap.get(cv2.CAP_PROP_FRAME_HEIGHT))
+print(f"分辨率：{width} x {height}")
+
+# FourCC 是指定视频编解码器的 4 字节代码，XVID 是常用的 AVI 编码格式
+fourcc = cv2.VideoWriter_fourcc(*"XVID")
+# 参数：输出路径，编解码器，帧率，分辨率
+saved_video = cv2.VideoWriter(output_path, fourcc, 20.0, (width, height))
 if not saved_video.isOpened():
-    print("saved_video is not opened")
+    print("视频写入器初始化失败")
+    cap.release()
     exit()
+
 while True:
-    ret,frame=cap.read()
+    ret, frame = cap.read()
     if not ret:
         break
-    cv2.imshow("video",frame)
-    # 写入帧率进入视频文件
+    cv2.imshow("video", frame)
     saved_video.write(frame)
-    if cv2.waitKey(1)==ord("q"):
+    if cv2.waitKey(1) == ord("q"):
         break
-# 释放资源
+
 cap.release()
 saved_video.release()
 cv2.destroyAllWindows()
-
+print(f"视频已保存至：{output_path}")
